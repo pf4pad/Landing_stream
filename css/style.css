@@ -8,6 +8,10 @@ body {
   color: #8D96BD;
 }
 
+ul {
+  list-style: none;
+}
+
 li {
   margin: 0;
   padding: 0;
@@ -327,13 +331,131 @@ h2 span {
   top: 0;
 }
 
+.features {
+  background-image: url(../images/features/features-bg.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+}
+
+.features__list {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin-top: 92px;
+  margin-bottom: 120px;
+}
+
+.features__item {
+  position: relative;
+  flex-basis: 25%;
+  max-width: 140px;
+}
+
+.features__item:not(:first-child)::before {
+  position: absolute;
+  content: '';
+  top: 120px;
+  height: 2px;
+  width: 28px;
+  background-color: #DAE4FE;
+  left: -54px;
+}
+
+.features__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 68px;
+  background-color: #F1F5FF;
+  border-radius: 100%;
+  margin: 0 auto;
+}
+
+.features__title {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 2;
+  margin-top: 32px;
+  margin-bottom: 28px;
+}
+
+.features__text {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 19px;
+}
+
+.btns__features {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.btn__features {
+  color: #D43F3F;
+  background: #FFD7D7;
+}
+
+.or-block {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 40px;
+}
+
+.or-block::before,
+.or-block::after {
+  display: block;
+  content: '';
+  width: 16px;
+  height: 1px;
+  background-color: #DAE4FE;
+  margin: 0 16px;
+}
+
 .stats {
   background-color: #E0E9FF;
 }
 
-.stats .xs {
-  padding-top: 20px;
-  padding-bottom: 20px;
+.stats {
+  display: flex;
+  background-color: #E0E9FF;
+}
+
+.stats__left,
+.stats__right {
+  padding: 64px 88px;
+  flex-basis: 50%;
+  font-family: 'Quicksand', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  color: #FFFFFF;
+}
+
+.stats__left {
+  background-color: #6888FF;
+  text-align: right;
+  color: #fff;
+}
+
+.stats__right {
+  color: #567AFF;
+}
+
+.stats__left-icon,
+.stats__right-icon {
+  margin-bottom: 24px;
+}
+
+.stats__left-counter,
+.stats__right-counter {
+  font-size: 48px;
+  line-height: 83px;
 }
 
 .blog {
