@@ -240,16 +240,11 @@ h2 span {
   box-shadow: 0px 10px 50px rgba(201, 209, 231, 0.6);
 }
 
-.icon-play::before {
-  display: block;
-  content: '';
-  width: 0;
-  height: 0;
-  margin-left: 16px;
-  border-width: 8px 12px;
-  border-style: solid;
-  border-color: transparent;
-  border-left-color: #5E81FE;
+.icon-play svg {
+  width: 12px;
+  height: 12px;
+  fill: #5E81FE;
+  transform: translate(15%, 5%);
 }
 
 .custumers .xs {
@@ -269,22 +264,47 @@ h2 span {
   opacity: 1;
 }
 
-.plan-and-manage {
+.bg {
   background-color: #F5F8FF;
+  position: relative;
+}
+
+.plan-and-manage {
+  display: flex;
 }
 
 .plan-and-manage__content {
   width: 50%;
+  position: relative;
 }
 
 .plan-and-manage__text {
-  margin-bottom: 48px;
+  margin-bottom: 160px;
+  max-width: 413px;
+}
+
+.btns {
+  display: inline-block;
+}
+
+.btns .btn:nth-child(1) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.btns .btn:nth-child(2) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .btn__plan-and-manage {
   background-color: #4C85FF;
   color: #FFF;
-  margin-right: 4px;
+  border: 1px solid #4C85FF;
+}
+
+.btn__plan-and-manage-icon {
+  margin-left: 4px;
 }
 
 .btn:hover {
@@ -299,6 +319,12 @@ h2 span {
 
 .btn__plan-and-manage-nobg:hover {
   background-color: #b9d0ff;
+}
+
+.bg .plan-and-image__illustrtion {
+  position: absolute;
+  left: 43%;
+  top: 0;
 }
 
 .stats {

@@ -211,6 +211,7 @@ h2
   margin: 0 auto $base*5
 
 .icon-play
+
   display: inline-flex
   justify-content: center
   align-items: center
@@ -220,17 +221,23 @@ h2
   background-color: #fff
   box-shadow: 0px 10px 50px rgba(201, 209, 231, 0.6)
 
-.icon-play::before
+.icon-play svg
+  width: $base*3
+  height: $base*3
+  fill: #5E81FE
+  transform: translate(15%,5%)
 
-  display: block
-  content: ''
-  width: 0
-  height: 0
-  margin-left: $base*4
-  border-width: $base*2 $base*3
-  border-style: solid
-  border-color: transparent
-  border-left-color: #5E81FE
+// .icon-play::before
+
+//   display: block
+//   content: ''
+//   width: 0
+//   height: 0
+//   margin-left: $base*4
+//   border-width: $base*2 $base*3
+//   border-style: solid
+//   border-color: transparent
+//   border-left-color: #5E81FE
 
 //=====custumers
 .custumers
@@ -249,19 +256,35 @@ h2
   opacity: 1
 
 //=====plan-and-manage
-.plan-and-manage
+.bg
   background-color: #F5F8FF
+  position: relative
+.plan-and-manage
+  display: flex
 .plan-and-manage__content
   width: 50%
+  position: relative
 
 .plan-and-manage__text
-  margin-bottom: $base*12
 
+  margin-bottom: $base*40
+  max-width: 413px
+.btns
+  display: inline-block
+.btns
+  .btn:nth-child(1)
+    border-top-right-radius: 0
+    border-bottom-right-radius: 0
+  .btn:nth-child(2)
+    border-top-left-radius: 0
+    border-bottom-left-radius: 0
 .btn
   &__plan-and-manage
     background-color: #4C85FF
     color: #FFF
-    margin-right: $base
+    border: 1px solid #4C85FF
+    &-icon
+      margin-left: $base
   &:hover
     background-color: #ADB4D2
   &__plan-and-manage-nobg
@@ -270,6 +293,12 @@ h2
     border: 1px solid #D1D1E4
     &:hover
       background-color: darken(#D2E1FF, 5%)
+
+.bg .plan-and-image__illustrtion
+  position: absolute
+  left: 43%
+  top: 0
+
 //=====features
 .features
 
